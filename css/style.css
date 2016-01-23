@@ -1,0 +1,81 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	box-sizing:border-box;
+	text-decoration:none;
+	font-family:Roboto;
+}
+body{
+	background:#ebebeb ;
+}
+
+#menu{
+	position:fixed;
+	/**/
+	right:-308px;
+	height:100%;
+	top:0;
+	width:300px;
+	background:#fff;
+	outline:8px solid rgba(37,47,56,.7);
+	z-index:99;
+	overflow-y:auto;
+}
+#menu .menu-title{
+	float:left; width:100%;
+	background:#2B6DC8;
+	color:white;
+	padding:8px;
+}
+#menu .menu-title .fechar{
+	float:right;
+	width:22px;
+	font-size:14px;
+	text-align:center;
+	border-radius:50%;
+	line-height:22px;
+	background:#639CEB;
+	color:white;
+}
+
+#menu li{
+	float:left;
+	width:100%;
+	border-bottom:2px solid #365E81;
+}
+#menu li:first-child > a::after{display:none;}
+#menu li > a::after{
+	content: '';
+	float:right;
+	width:15px;
+	height:8px;
+	background:url(../images/arrow.png) top left no-repeat;
+	background-position:-15px 0;
+	margin-top:16px;
+}
+#menu li > a.down::after{background-position:0 0;}
+#menu li > a{
+	float:left;
+	display:block;
+	width:100%;
+	padding:0 6px;
+	width:100%;
+	color:white;
+	text-shadow:#000 0 1px 0;
+	background:#4C86D8;
+	line-height:40px;
+}
+#menu li >a:hover{background:#639CEB;}
+#menu li ul li a::after{width:0; background:none; display:none;}
+#menu li ul li a{
+	background:#EEEEEE;
+	color:#696969;
+	text-shadow:none;
+}
+#menu li ul li{border-bottom:2px solid #D7D7D7; border-top:1px solid #fff;}
+#menu li ul li a:hover{background:white;}
+#menu::-webkit-scrollbar{width:0;}
+#menu::-webkit-scrollbar-track{background-color:#000;border-left:1px solid #000;border-right:1px solid #000;}
+#menu::-webkit-scrollbar-thumb{background-color:#333;}
+#menu::-webkit-scrollbar-thumb:hover{background-color:#222;}
